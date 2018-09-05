@@ -22,7 +22,9 @@ class DbTableFactory implements iDataTableFactory
             return;
         }
 
-        $ret = new DbTable($name, $this->db_table_model);
+        $table_data = $this->db_table_model->getTableMeta($name);
+
+        $ret = new DbTable($name, $table_data, $this->db_table_model);
         return $ret;
     }
 }

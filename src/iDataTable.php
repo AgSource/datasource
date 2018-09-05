@@ -12,7 +12,7 @@ namespace agsource\datasource;
  *
  */
 interface iDataTable {
-	function __construct($full_table_name, $db_table_model);
+    function __construct($full_table_name, $table_meta, $db_table_model);
     function field_exists($col_name);
     function columnNames();
     function tableName($full_table_name = null);
