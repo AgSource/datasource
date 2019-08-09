@@ -256,11 +256,11 @@ class DbField implements iDataField {
 	}
 
     public function hasMetricConversion(){
-        return is_a($this->data_conversion, '\myagsource\Datasource\iDataConversion');
+        return is_a($this->data_conversion, '\agsource\datasource\iDataConversion');
     }
 
     public function conversionToMetricFactor(){
-        return is_a($this->data_conversion, '\myagsource\Datasource\iDataConversion') ? $this->data_conversion->metricFactor() : 1;
+        return is_a($this->data_conversion, '\agsource\datasource\iDataConversion') ? $this->data_conversion->metricFactor() : 1;
     }
 
     public function isNumeric(){
